@@ -1,0 +1,9 @@
+PUT http://localhost:3001/api/user/6175ce0e4e376c4c69cc121f
+Content-Type: application/json
+
+{
+  "name": "Victor Samuel 12",
+  "last_name": "Izquierdo Zuloaga 2",
+  "email": "samizqui@gmail.com 2",
+  "password": "asd123qwe2"
+}

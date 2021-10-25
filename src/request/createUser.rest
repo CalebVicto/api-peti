@@ -1,0 +1,9 @@
+POST http://localhost:3001/api/user
+Content-Type: application/json
+
+{
+    "name":"Josue Manuel",
+    "last_name":"Izquierdo Zulaga",
+    "email": "josueizq@gmail.com",
+    "password": "asd123qwe"
+}
