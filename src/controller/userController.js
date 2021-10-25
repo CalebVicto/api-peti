@@ -37,7 +37,7 @@ const getUserById = (req, res, next) => {
 const deleteById = (req, res, next) => {
 	User.findByIdAndRemove(req.params.id)
 		.then(() => {
-			res.status(404).end()
+			res.status(204).end()
 		})
 		.catch((e) => next(e))
 }
