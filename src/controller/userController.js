@@ -1,6 +1,6 @@
 const { User } = require('../model/userModel')
 
-const create = (req, res) => {
+const create = (req, res, next) => {
 	const data = req.body
 
 	if (data === undefined) {
@@ -16,12 +16,8 @@ const create = (req, res) => {
 
 	user
 		.save()
-		.then((data) => {
-			res.json(data)
-		})
-		.catch((e) => {
-			console.log(e)
-		})
+		.then((data) => res.json(data))
+		.catch((e) => next(e))
 }
 
 const getAll = (req, res) => {

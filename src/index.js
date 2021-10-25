@@ -10,12 +10,12 @@ const PORT = 3001 || process.env.PORT
 app.use(express.json())
 
 const errorHandler = (error, request, response, next) => {
-	console.error(error.message)
-
+	console.error(error.name)
 	if (error.name === 'CastError') {
 		return response.status(400).send({ error: 'Formato incorrecto' })
+	} else if (error.name === 'ValidationError') {
+		return response.status(400).json({ error: error.message })
 	}
-
 	next(error)
 }
 
