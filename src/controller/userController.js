@@ -21,7 +21,7 @@ const create = (req, res, next) => {
 }
 
 const getAll = (req, res) => {
-	User.find({}).then((data) => {
+	User.find({}).sort({_id: -1}).then((data) => {
 		res.json(data)
 	})
 }
